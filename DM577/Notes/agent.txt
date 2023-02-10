@@ -1,0 +1,51 @@
+Problem solven agent: search for
+a sequence of actions that leads to 
+the goal.
+
+Focus on enverment that are:
+    - Single agent
+    - determanextic
+    - epictic
+    - static
+    - fully observable
+    - dinamic
+
+Four stage plan:
+    1) Goal formulation
+    2) Problem formulation
+    3) search for a solution
+    4) execute the solution
+
+Problem formulation:
+    - State space   (all posiable states)
+    - Initial state (the state were we start)
+    - Goal state(s) (where we want to do/end)
+    - Transition model  (What action each state can do and what it does)
+    - Cost model    (How good each action is)
+
+Examble:
+Train in Denmark.
+State space = all train stations in denmark
+Initial state = which station we start at
+goal state = the station we want to go to
+transition model = the difrent trains we can take
+cost model = how good each train is
+
+lets say we are at Korsør st and want to go to Odense st.
+Initial sstate is Korsør st
+goal state is Odense
+Transition model will be all stops from Korsør til København st and Aarhus st
+cost model will be København cost alot and Aarhus will be good.
+
+Search tree:
+    - root : initial node
+    - edges : transitions
+
+Search algoretmers choose which node to expand next
+These nodes are storaged in a (prioridty) queue
+
+Evelution of search algoretmers
+    -> completenes
+    -> cost optimality
+    -> time complexity
+    -> space complexity
