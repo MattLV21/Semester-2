@@ -1,6 +1,6 @@
 package DM575.Exercises.Lab1;
 
-public class Variables {
+public class Variablese {
     public static void main(String[] args) {
         int number = 5;
         double d = 15.3223;

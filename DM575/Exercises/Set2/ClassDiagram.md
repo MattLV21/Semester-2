@@ -1,4 +1,5 @@
-
+# Exercise Set 2
+## Class diagram
 ::: mermaid
 classDiagram
 
