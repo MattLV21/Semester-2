@@ -1,12 +1,10 @@
 package DM575.Exercises.Set2;
 
-import java.awt.Color;
-
 public class ImageUtility {
     
     public static void main(String[] args) {
         ImageUtility uitility = new ImageUtility();
-        Image myImage = fromFile("myImage");
+        Image myImage = fromFile("myImage.jpg");
         myImage.display();
         uitility.encrypt(myImage, "This is an encrypted image");
         myImage.display();
