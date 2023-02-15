@@ -68,9 +68,3 @@ Cost model: distance + rotation
 Size of state space, positions of intersection of two or more corridors times 4
 positions of intersection of two or more corridors and the four rotations.
 
-
-(c) From each point in the maze, we can move in any of the four directions until we reach a
-turning point, and this is the only action we need to do. Reformulate the problem using these
-actions. Do we need to keep track of the robot’s orientation now?
-
-(d) In our initial description of the problem we already abstracted from the re
