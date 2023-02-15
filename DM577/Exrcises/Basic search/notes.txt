@@ -1,0 +1,63 @@
+Give a complete problem formulation for each of the following problems. Choose a formulation
+that is precise enough to be implemented.
+
+Problem formulation:
+    - State space   (all posiable states)
+    - Initial state (the state were we start)
+    - Goal state(s) (where we want to do/end)
+    - Transition model  (What action each state can do and what it does)
+    - Cost model    (How good each action is)
+
+(a) There are six glass boxes in a row, each with a lock. Each of the first five boxes holds a key
+unlocking the next box in line; the last box holds a banana. You have the key to the first box,
+and you want the banana.
+
+Our solution to the problem:
+    - State space: A list of keys and a banana.
+    - Initial state: A key.
+    - Goal state: Have a banana.
+    - Transition model: Use a key to open a new box.
+    - Cost model: All actions cost something... times key used.
+Luis' solution:
+    - State space: 0, 1, 2, 3, 4, 5, 6
+    - Initial state: 0
+    - Goal state: 6
+    - Transition model: +1
+    - Cost model: 1
+
+(b) You start with the sequence ABABAECCEC, or in general any sequence made from A, B, C,
+and E. You can transform this sequence using the following equalities: AC = E, AB = BC,
+BB = E, and Ex = x for any x. For example, ABBC can be transformed into AEC, and then
+AC, and then E. Your goal is to produce the sequence E.
+
+    - State space: {A, B, C, E}.
+    - Initial state: "ABABAECCEC".
+    - Goal state(s): "E".
+    - Transition model: Use one rules on the String.
+    - Cost model: 1 per action.
+
+
+
+(c) There is an n × n grid of squares, each square initially being either unpainted floor or a
+bottomless pit. You start standing on an unpainted floor square, and can either paint the
+square under you or move onto an adjacent unpainted floor square. You want the whole floor
+painted.
+
+(d) A container ship is in port, loaded high with containers. There 13 rows of containers, each
+13 containers wide and 5 containers tall. You control a crane that can move to any location
+above the ship, pick up the container under it, and move it onto the dock. You want the ship
+unloaded.
+
+(e) Using only four colors, you have to color a planar map in such a way that no two adjacent
+regions have the same color.
+
+(f) A 3-foot-tall monkey is in a room where some bananas are suspended from the 8-foot ceiling.
+He would like to get the bananas. The room contains two stackable, movable, climbable
+3-foot-high crates.
+
+(g) You have a program that outputs the message “illegal input record” when fed a certain file of
+input records. You know that processing of each record is independent of the other records.
+You want to discover what record is illegal.
+(h) You have three jugs, measuring 12 liters, 8 liters, and 3 liters, and a water faucet. You can fill
+the jugs up or empty them out from one to another or onto the ground. You need to measure
+out exactly one liter.
