@@ -30,34 +30,47 @@ and E. You can transform this sequence using the following equalities: AC = E, A
 BB = E, and Ex = x for any x. For example, ABBC can be transformed into AEC, and then
 AC, and then E. Your goal is to produce the sequence E.
 
-    - State space: {A, B, C, E}.
+    - State space: {A, B, C, E}*.
     - Initial state: "ABABAECCEC".
     - Goal state(s): "E".
     - Transition model: Use one rules on the String.
     - Cost model: 1 per action.
 
+__________________Problem 2____________________
+
+A robot has the task of navigating out of a maze. The robot starts in the center of the maze facing
+north. It can turn to face north, east, south, or west. The robot can also move forward a certain
+distance, although it will stop before hitting a wall.
+
+(a) Formulate this problem. How large is the state space?
+    - State space: All posiable positions and orientation..
+    - Initial state: center of the maze facing north.
+    - Goal state(s): With the exit and facing the exit.
+    - Transition model: 
+        Rotation -> face the dicered orientation.
+        move X distance -> move x positions or until wall.
+    - Cost model: X for moving X positions + 1 for rotation.
+Size of state space, all positions*4...
+all positions and all rotations.
+
+(b) In navigating a maze, the only place we need to turn is at the intersection of two or more
+corridors. Reformulate this problem using this observation. How large is the state space now?
+
+- State space: All posiable positions* and orientation and Initial state (and goal state). 
+* Intersection of two or more corridors.
+- Initial state: center of the maze facing north.
+- Goal state(s): With the exit and facing the exit.
+- Transition model: 
+    Rotation -> face the dicered orientation.
+    Move to next intersection of two or more corridors.
+Cost model: distance + rotation
+
+Size of state space, positions of intersection of two or more corridors times 4
+positions of intersection of two or more corridors and the four rotations.
 
 
-(c) There is an n × n grid of squares, each square initially being either unpainted floor or a
-bottomless pit. You start standing on an unpainted floor square, and can either paint the
-square under you or move onto an adjacent unpainted floor square. You want the whole floor
-painted.
+(c) From each point in the maze, we can move in any of the four directions until we reach a
+turning point, and this is the only action we need to do. Reformulate the problem using these
+actions. Do we need to keep track of the robot’s orientation now?
 
-(d) A container ship is in port, loaded high with containers. There 13 rows of containers, each
-13 containers wide and 5 containers tall. You control a crane that can move to any location
-above the ship, pick up the container under it, and move it onto the dock. You want the ship
-unloaded.
-
-(e) Using only four colors, you have to color a planar map in such a way that no two adjacent
-regions have the same color.
-
-(f) A 3-foot-tall monkey is in a room where some bananas are suspended from the 8-foot ceiling.
-He would like to get the bananas. The room contains two stackable, movable, climbable
-3-foot-high crates.
-
-(g) You have a program that outputs the message “illegal input record” when fed a certain file of
-input records. You know that processing of each record is independent of the other records.
-You want to discover what record is illegal.
-(h) You have three jugs, measuring 12 liters, 8 liters, and 3 liters, and a water faucet. You can fill
-the jugs up or empty them out from one to another or onto the ground. You need to measure
-out exactly one liter.
+(d) In our initial description of the problem we already abstracted from the re
