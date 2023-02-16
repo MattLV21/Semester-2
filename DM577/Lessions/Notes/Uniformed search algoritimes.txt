@@ -1,0 +1,18 @@
+
+1) Breath-first search
+    - use a queue for unexparned nodes.
+    - always complete
+    - cost-optimal if all actions have the same cost.
+    - themille memory consumption.
+    - ealy goal test
+
+2) Uniform cost-search (Dy)
+    - sprt nodes bt total cost.
+    - use priority queue.
+    - late goal test.
+
+3) depth-first search
+    - use a static for unexparned nodes.
+    - in general not complete.
+    - in general not cost-optimal.
+    - low memory.

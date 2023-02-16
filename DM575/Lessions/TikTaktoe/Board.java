@@ -1,8 +1,8 @@
 package DM575.Lessions.TikTaktoe;
 
 public class Board {
-    String player; // X or O
-    String[] Board;
+    public String player; // X or O
+    private String[] Board;
     private String[] base;
     
     public Board() {
