@@ -7,12 +7,19 @@ import java.util.Scanner;
 public class test {
     // Display a message on start
     public static void main(String[] args) {
-        System.out.print("Plase enter a number ");
-        Scanner userInput = new Scanner(System.in);
-        int y;
-        y = userInput.nextInt();
-        System.out.println("You entered " + y);
-        userInput.close();
+        
+        int mod = 256;
+        int pri = 150;
+
+
+        int newInt = pri % mod;
+        int fromNewInt = pri * mod;
+        message(newInt);
+        message(fromNewInt);
+    }
+
+    public static void message(int message) {
+        System.out.println(message);
     }
 
 }

@@ -1,0 +1,8 @@
+Informed search algorithm
+Heuristic : a function that awards values to states.
+In search : The heuristic estimates the cost from a state to the goal.
+
+
+Greedy search : 
+always choose the state with the least value (as per the heuristic).
+    - In general not complete

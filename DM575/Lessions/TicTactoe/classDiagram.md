@@ -1,7 +1,7 @@
 
 ::: mermaid
 classDiagram
-    Board --|> Player
+    Board --> Player
     Board : +Board()
     Board : +print() void
     Board : +nextPlayer() Player

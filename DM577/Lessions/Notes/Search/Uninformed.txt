@@ -1,4 +1,6 @@
+Uninformed search algorithm
 
+Week 7 part 1 search algorithm
 1) Breath-first search
     - use a queue for unexparned nodes.
     - always complete
@@ -16,3 +18,12 @@
     - in general not complete.
     - in general not cost-optimal.
     - low memory.
+
+Week 7 part 2 search algorithm
+Iterative depthing
+    - perform bounded depth-first search.
+    - if no solution is found increace the bound and try again.
+
+Bidirectional search
+    - search from the inetial state and from the goal state.
+    - when you find a common state, there is asolution.

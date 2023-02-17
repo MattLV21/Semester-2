@@ -1,4 +1,4 @@
-package DM575.Lessions.TikTaktoe;
+package DM575.Lessions.TicTactoe;
 
 public class Board {
     public String player; // X or O
