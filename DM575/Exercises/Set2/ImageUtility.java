@@ -46,8 +46,7 @@ public class ImageUtility {
                 Color currentColor = image.pixel(x, y);
                 Color oldColor = encryptedImage.pixel(prevX, prevY);
                 
-                String hashString = ""+key.charAt(Index % key.length());
-                int code = hashString.hashCode();
+                int code = key.codePointAt(Index % key.length());
                 
                 encryptedImage.setPixel(x, y, addColor(currentColor, oldColor, code));
                 

@@ -1,0 +1,47 @@
+Classes(class, type, country, numGuns, bore, displacement)
+Ships(name, class, launched)
+Battles(name, date)
+Outcomes(ship, battle, result)
+
+b) Find the names of all ships launched prior to 1918, but call the resulting
+column shipName.
+
+SELECT name as ShipName
+FROM Ships
+WHERE launched < 1918
+
+c) Find the names of ships sunk in battle and the name of the battle in which
+they were sunk.
+
+SELECT Outcomes.ship, Outcomes.battle
+FROM Shpis, Outcomes
+WHERE Ships.name = Outcomes.ship AND Outcomes.result = 'sunk'
+
+d) Find all ships that have the same name as their class.
+
+SELECT name
+FROM Ships
+WHERE name = class
+
+e) Find the names of all ships that begin with the letter “R.”
+
+SELECT name
+FROM Ships
+WHERE name LIKE 'R%'
+
+! f) Find the names of all ships whose name consists of three or more words
+(e.g., King George V).
+
+SELECT name
+FROM Ships
+WHERE name LIKE '% % %'
+
+
+of Exercise 2.4.3, and evaluate your queries using the data of that exercise
+
+List the name, displacement, and number of guns of the ships engaged in
+the battle of Guadalcanal.
+
+SELECT name, displacement, numGuns
+FROM (classes NATURAL JOIN Ships) Join Outcomes on name = Ship
+WHERE battle = 'Guadalcanal'
